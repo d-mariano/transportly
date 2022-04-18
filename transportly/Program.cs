@@ -7,7 +7,7 @@ namespace Transportly
         static void Main(string[] args)
         {
             FlightLoader flightLoader = new FlightLoader(new LocalFlightSource());
-            flightLoader.LoadFlightSchedule();
+            flightLoader.LoadFlight();
         }
 
     }

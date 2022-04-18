@@ -13,13 +13,18 @@ namespace Transportly
             FlightSource = flightSource;
         }
 
-        public void LoadFlightSchedule()
+        public void LoadFlight()
         {
-            Flights = FlightSource.GetFlights();
+            this.LoadFlightSchedule();
             this.PrintFlightSchdule();
         }
 
-        public void PrintFlightSchdule()
+        private void LoadFlightSchedule()
+        {
+            Flights = FlightSource.GetFlights();
+        }
+
+        private void PrintFlightSchdule()
         {
             foreach (Flight flight in Flights)
             {
