@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
@@ -6,7 +7,9 @@ namespace Transportly.OrderSource
 {
     public class LocalOrderSource : IOrderSource
     {
-        public const string FilePath = "coding-assigment-orders.json";
+        private readonly string FilePath = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory)
+            + Path.DirectorySeparatorChar
+            + @"coding-assigment-orders.json";
         
         public List<Order> GetOrders()
         {
