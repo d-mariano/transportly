@@ -1,7 +1,9 @@
-﻿namespace Transportly.OrderSource
+﻿using System.Collections.Generic;
+
+namespace Transportly.OrderSource
 {
     public interface IOrderSource
     {
-        Order[] GetOrders();
+        List<Order> GetOrders();
     }
 }

@@ -1,9 +1,11 @@
-﻿namespace Transportly.FlightSource 
+﻿using System.Collections.Generic;
+
+namespace Transportly.FlightSource 
 {
     public class LocalFlightSource : IFlightSource
     {
-        public Flight[] GetFlights() {
-            return new Flight[] {
+        public List<Flight> GetFlights() {
+            return new List<Flight> {
                 new Flight(
                     flightNumber: 1,
                     day: 1,

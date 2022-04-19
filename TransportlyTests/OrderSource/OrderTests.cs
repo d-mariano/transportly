@@ -16,7 +16,7 @@ namespace TransportlyTests
                 destination: "YYZ"
             );
 
-            Order order = new Order("order-001");
+            Order order = new Order("order-001", "YYZ");
             order.AssignFlight(flight);
 
             Assert.Equal(
@@ -28,7 +28,7 @@ namespace TransportlyTests
         [Fact]
         public void TestOrderToStringWithoutFlight()
         {
-            Order order = new Order("order-001");
+            Order order = new Order("order-001", "YYZ");
             Assert.Equal(
                 "order: order-001, flightNumber: not scheduled",
                 order.ToString()

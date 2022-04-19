@@ -1,4 +1,5 @@
 ﻿using Transportly.FlightSource;
+using Transportly.OrderSource;
 
 namespace Transportly
 {
@@ -6,8 +7,11 @@ namespace Transportly
     {
         static void Main(string[] args)
         {
-            FlightLoader flightLoader = new FlightLoader(new LocalFlightSource());
-            flightLoader.LoadFlight();
+            FlightLoader flightLoader = new FlightLoader(
+                new LocalFlightSource(),
+                new LocalOrderSource()
+            );
+            flightLoader.GenerateOrderItineraries();
         }
 
     }

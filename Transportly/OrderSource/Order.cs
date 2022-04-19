@@ -4,12 +4,14 @@ namespace Transportly.OrderSource
 {
     public class Order
     {
-        readonly string OrderId;
+        public readonly string Id;
+        public readonly string Destination;
         public Flight Flight;
 
-        public Order(string orderId)
+        public Order(string id, string destination)
         {
-            OrderId = orderId;
+            Id = id;
+            Destination = destination;
         }
 
         public void AssignFlight(Flight flight) {
@@ -19,9 +21,9 @@ namespace Transportly.OrderSource
         public override string ToString()
         {
             if(Flight == null) {
-                return $"order: {OrderId}, flightNumber: not scheduled";
+                return $"order: {Id}, flightNumber: not scheduled";
             }
-            return $"order: {OrderId}" +
+            return $"order: {Id}" +
                 $", flightNumber: {Flight.FlightNumber}" +
                 $", departure: {Flight.Source}" +
                 $", arrival: {Flight.Destination}" +

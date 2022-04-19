@@ -8,9 +8,15 @@
   <ItemGroup>
     <None Remove="FlightSource\" />
     <None Remove="OrderSource\" />
+    <None Remove="coding-assigment-orders.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FlightSource\" />
     <Folder Include="OrderSource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="coding-assigment-orders.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
